@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,9 +13,12 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+	public function boot()
     {
-        Schema::defaultStringLength(191);
+		if(env('APP_ENV') !== 'local')
+        {
+		URL::forceScheme('https');
+		}
     }
 
     /**
