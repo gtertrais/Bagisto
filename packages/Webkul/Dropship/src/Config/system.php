@@ -130,7 +130,7 @@ return [
                 'info' => 'dropship::app.admin.system.increase-price-info',
                 'type' => 'depends',
                 'depend' => 'price:3',
-                'validation' => 'required|decimal',
+                'validation' => 'required|number',
                 'channel_based' => true,
                 'locale_based' => true
             ], [
