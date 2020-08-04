@@ -1,6 +1,6 @@
 <?php
 
-$location = str_replace('\\', '/', getcwd());
+/*$location = str_replace('\\', '/', getcwd());
 $currentLocation = explode("/", $location);
 $desiredLocation = implode("/", $currentLocation);
 $installFile = $desiredLocation . '/installer' . '/install.php';
@@ -30,7 +30,7 @@ if (! is_null($install)) {
     */
 
     require __DIR__.'/../vendor/autoload.php';
-}
+//}
 
 
 /**
